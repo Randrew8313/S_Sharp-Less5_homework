@@ -34,19 +34,19 @@ int InputArrayLength(string message)
 
 int EventNumInArray(int[] array)
 {
-    int eventIndex = default;
-    for(int i = 0; i < array.Length;i++)
+    int eventSum = default;
+    for(int i = 0; i < array.Length; i++)
     {
         int eventCheck = array[i] % 2;
         if(eventCheck == 0)
         {
-            eventIndex ++;
+            eventSum ++;
         }
     }
-    return eventIndex;
+    return eventSum;
 }
 
 int arrLeng = InputArrayLength("Введите длину массива: ");
 int[] arr = GenerateArray(arrLeng);
 PrintArray(arr);
-Console.WriteLine($"Количество четных чисел массива равно {EventNumInArray(arr)}.");
+Console.WriteLine($"Количество четных чисел в массиве равно {EventNumInArray(arr)}.");
